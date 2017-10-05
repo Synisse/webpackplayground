@@ -1,0 +1,84 @@
+.navbar-container {
+  max-width: 1024px;
+  margin: 0 auto 0 auto;
+
+  .navbar-wrapper {
+    display: flex;
+    max-width: 1024px;
+    margin: 0 auto 0 auto;
+
+    .nav-bar-link-container {
+      text-align: center;
+      height: 88px;
+      width: 160px;
+      font-size: 18px;
+
+      .pink-button-wrapper {
+        background: linear-gradient(0deg, fade(@monokai-pink, 20%), fade(@monokai-pink, 25%));
+
+        :active {
+          background-color: fade(@monokai-pink, 5%);
+        }
+      }
+
+      .green-button-wrapper {
+        background: linear-gradient(0deg, fade(@green, 20%), fade(@green, 25%));
+
+        :active {
+          background-color: fade(@green, 5%);
+        }
+      }
+
+      .yellow-button-wrapper {
+        background: linear-gradient(0deg, fade(@yellow, 20%), fade(@yellow, 25%));
+
+        :active {
+          background-color: fade(@yellow, 5%);
+        }
+      }
+
+      .button-wrapper {
+        width: 160px;
+        height: 48px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        line-height: 48px;
+        cursor: pointer;
+        user-select: none;
+
+        .link-font {
+          color: @orange;
+          text-decoration: none;
+        }
+
+        .link-font:hover {
+          color: darken(@yellow, 10%);
+        }
+
+        .link-font:active {
+          color: lighten(@yellow, 10%);
+        }
+      }
+    }
+
+    .left-button {
+      margin-left: auto;
+    }
+
+    .right-button {
+      margin-right: auto;
+    }
+  }
+
+  .bottom-bar {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, lighten(@light-grey, 50%) 50%, rgba(0,0,0,0) 100%);
+    margin-bottom: 32px;
+  }
+
+  .active-navbar-item {
+    color: @yellow !important;
+  }
+}

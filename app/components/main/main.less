@@ -1,0 +1,88 @@
+body {
+  background-color: @background-grey;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 0;
+  margin: 0;
+
+  font-size: 14px;
+}
+
+.main-container {
+  max-width: 768px;
+  margin: 0 auto;
+  height: 100%;
+
+  .content-area {
+    display: flex;
+    //background-color: fade(@light-grey, 75%);
+    background-color: @light-grey;
+    //background-color: lighten(@light-grey, 10%);
+    //background-color: fade(@green, 15%);
+    padding: 48px;
+    //box-shadow: 2px 2px 6px 2px rgba(0,0,0,0.5);
+
+    //border-radius: 8px;
+
+    .info-text {
+      margin-left: 75px;
+      flex: 1;
+      color: @green;
+
+      .indent {
+        margin-left: 16px;
+      }
+
+      .array-indent {
+        margin-left: 32px;
+      }
+
+      .white {
+        color: white;
+      }
+
+      .pink {
+        color: @monokai-pink;
+      }
+
+      .green {
+        color: @monokai-green;
+      }
+
+      .purple {
+        color: @monokai-purple;
+      }
+
+      .yellow {
+        color: @monokai-yellow;
+      }
+
+      .orange {
+        color: @orange;
+      }
+    }
+
+    .profile-wrapper {
+      flex: 1;
+      display: flex;
+
+      .profile-image {
+        flex: 1;
+        margin: auto;
+        margin-right: 0;
+        border: 2px solid @monokai-yellow;
+        //border: 2px solid white;
+        border-radius: 150px;
+        height: 300px;
+        width: 300px;
+        background-image: url('https://pbs.twimg.com/profile_images/886004488787677199/RUbhJdyz_400x400.jpg');
+        background-size: cover;
+        box-shadow: 2px 2px 6px 2px rgba(0,0,0,0.5);
+      }
+    }
+  }
+}
