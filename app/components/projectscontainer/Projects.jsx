@@ -219,7 +219,7 @@ const projects = [
         'youtube': '',
         'screenshots': [],
         'longdescription': 'This site had lots of rewrites mostly because I learned about new technologies or frameworks.',
-        'sourcecode': 'https://github.com/Synisse/meteorplayground'
+        'sourcecode': 'https://github.com/Synisse/webpackplayground'
     }
 ];
 
