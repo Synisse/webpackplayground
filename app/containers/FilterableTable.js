@@ -3,7 +3,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { filterTable } from '../actions';
 import ProductTable from '../components/ProductTable';
-// import { filterableTable } from '../styles/filterableTable.less';
 
 const FilterableTable = ({ filter, onFilter }) => {
     let input;

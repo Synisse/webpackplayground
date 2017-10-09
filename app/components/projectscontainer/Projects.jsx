@@ -207,7 +207,8 @@ const projects = [
             'JavaScript',
             'Node',
             'React',
-            'Meteor',
+            'Redux',
+            'Webpack',
             'HTML5',
             'CSS3',
             'Less'
