@@ -5,6 +5,7 @@ import NavBar from './components/navbar/Navbar.jsx';
 import Main from './components/main/Main.jsx';
 import ProjectsContainer from './components/projectscontainer/Projects.jsx';
 import Footer from './components/footer/Footer.jsx';
+import Imprint from './components/imprint/Imprint.jsx';
 
 import createBrowserHistory from 'history/createBrowserHistory';
 const browserHistory = createBrowserHistory();
@@ -18,6 +19,9 @@ export const renderRoutes = () => (
             </Switch>
             <Switch>
                 <Route exact path="/projects/:id" component={ProjectsContainer}/>
+            </Switch>
+            <Switch>
+                <Route exact path="/imprint" component={Imprint}/>
             </Switch>
             <Switch>
                 <Redirect exact from="/*" to="/aboutme" />
