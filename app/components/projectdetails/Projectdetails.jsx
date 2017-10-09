@@ -26,7 +26,7 @@ class ProjectDetails extends Component {
             splitDescription = splitDescription.filter(aSplit => aSplit !== '');
 
             // maximum links = 1
-            if(splitDescription.length === 2) {
+            if (splitDescription.length === 2) {
                 return (
                     <div>
                         <span>{splitDescription[0]}</span>
@@ -35,18 +35,16 @@ class ProjectDetails extends Component {
                     </div>
                 );
             }
-            else {
-                return (
-                    <div>
-                        <span>{splitDescription[0]}</span>
-                        <a href={this.props.project.longdescriptionlinks[0].link} target="_blank">{this.props.project.longdescriptionlinks[0].placeholder}</a>
-                    </div>
-                );
-            }
+
+            return (
+                <div>
+                    <span>{splitDescription[0]}</span>
+                    <a href={this.props.project.longdescriptionlinks[0].link} target="_blank">{this.props.project.longdescriptionlinks[0].placeholder}</a>
+                </div>
+            );
         }
-        else {
-            return <span>{this.props.project.longdescription}</span>;
-        }
+
+        return <span>{this.props.project.longdescription}</span>;
     }
 
     render() {
