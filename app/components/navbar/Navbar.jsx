@@ -5,21 +5,18 @@ class NavbarContainer extends Component {
     constructor(props) {
         super(props);
 
-        console.log('navbar props: ', props);
-
         this.state = {
             selectedEntry: '/aboutme'
         };
     }
 
-    // workaround to trigger component rerender
-    selectEntry (aEntry) {
+    selectEntry(aEntry) {
         this.props.history.push(aEntry);
 
         this.setState({selectedEntry: aEntry});
     }
 
-    getActiveClass (aEntry) {
+    getActiveClass(aEntry) {
         if(this.state.selectedEntry.indexOf(aEntry) !== -1) {
             return 'link-font active-navbar-item';
         }
@@ -36,18 +33,20 @@ class NavbarContainer extends Component {
                             <div className={this.getActiveClass.bind(this, 'aboutme')()}>About</div>
                         </div>
                     </div>
-                    <div className="nav-bar-link-container">
+                    <div className="nav-bar-link-container right-button">
                         <div className="button-wrapper" onClick={this.selectEntry.bind(this, '/projects/-')}>
                             <div className={this.getActiveClass.bind(this, 'projects')()}>Projects</div>
                         </div>
                     </div>
-                    <div className="nav-bar-link-container right-button">
-                        <div className="button-wrapper" onClick={this.selectEntry.bind(this, '/contact')}>
-                            <div className={this.getActiveClass.bind(this, 'contact')()}>Contact</div>
-                        </div>
-                    </div>
+                    {
+                        // <div className="nav-bar-link-container right-button">
+                        //    <div className="button-wrapper" onClick={this.selectEntry.bind(this, '/contact')}>
+                        //        <div className={this.getActiveClass.bind(this, 'contact')()}>Contact</div>
+                        //    </div>
+                        // </div>
+                    }
                 </div>
-                <div className="bottom-bar"></div>
+                <div className="bottom-bar"/>
             </div>
         );
     }
